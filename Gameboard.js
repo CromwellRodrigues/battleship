@@ -11,4 +11,15 @@ export default class Gameboard {
         }
     }
 
+
+    receiveAttack(x,y) {
+        const coords = `${x},${y}`;
+        if (this.board[coords]) {
+            this.board[coords].hit();
+            return true;
+        } else {
+            this.missedAttacks.push(coords);
+            return false;
+        }
+    }
 }

@@ -8,27 +8,48 @@
 </head>
 <body>
 
-    <div class="flex gap-10 p-10 justify-center">
-        
-        <div>
-            <h2 class="text-xl font-bold mb-4 text-center">
-                Your Fleet
-            </h2>
-            <div id="player-board" class="grid grid-cols-10 grid-rows-10 gap-1 bg-slate-300 border-2 border-slate-400"></div>
+    <div class="flex  flex-col bg-linear-to-br from-violet-800 via-indigo-700 to-blue-900  min-h-screen justify-center   ">
 
+        <div id="game-status"
+         class= "text-2xl text-yellow-300 font-mono mb-6 text-center animate-pulse"
+        >
+            PHASE 1: DEPLOY YOUR FLEET (5 SHIPS REMAINING)
+        </div>
+
+        <div class="flex justify-center mb-6">
+        <button id="reset-btn" class="hidden px-10 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold uppercase rounded-lg shadow-lg transition-all active:scale-95">
+            Restart Operation
+        </button>
+    </div>
+
+        <div class="flex flex-col lg:flex-row w-full gap-x-10 gap-y-10 justify-center mt-20 items-center lg:items-start ">
+        
+            <div class="flex flex-col items-center "> 
+               
+                    <h2 class="text-3xl text-white/90 font-bold mb-4 text-center uppercase">
+                        Your Fleet
+                    </h2>
+                    <div id="player-board" 
+                    class="box-border grid grid-cols-10 grid-rows-10 gap-1 bg-slate-200 border-1 border-slate-400 w-[350px] max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl  shadow-xl shadow-violet-900  aspect-square "></div>
+               
+                    <button id="rotate-btn" class="mt-4 px-20 py-6 bg-sky-700 text-white mb-4 w-fit uppercase">Rotate your Ship</button>
+               
+                
+            </div>
+
+
+            <div class="flex flex-col items-center">
+                <h2 class="text-3xl text-red-300/90 font-bold mb-4 text-center uppercase">
+                    Enemy Waters
+                </h2>
+                <div id="computer-board"
+                class="box-border grid grid-cols-10 grid-rows-10 gap-1 bg-slate-200 border-2  border-slate-400 w-[350px] max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl  shadow-xl shadow-black-900  aspect-square "></div>
+            </div>
 
             
         </div>
 
-
-        <div>
-            <h2 class="text-xl font-bold mb-4 text-center">
-                Enemy Waters
-            </h2>
-            <div id="computer-board" class="grid grid-cols-10 grid-rows-10 gap-1 bg-slate-300 border-2 border-slate-400"></div>
-        </div>
     </div>
-
 
     <script type="module" src="index.js"></script>
 </body>

@@ -11,7 +11,7 @@ export const renderBoard = (containerId, gameboard, isEnemy=false) => {
 
             // create tiny cell for each coordinate
             const cell = document.createElement('div');
-            cell.classList.add('w-8', 'h-8', 'bg-blue-500', 'cursor-pointer', 'hover:bg-blue-400');
+            cell.classList.add('bg-blue-500', 'cursor-pointer', 'hover:bg-blue-400', 'border', 'border-gray-300');
 
 
             // hidden label - I am square(2,4)
